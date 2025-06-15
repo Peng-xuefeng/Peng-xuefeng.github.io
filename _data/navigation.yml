@@ -2,6 +2,8 @@
 main:
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "About"
+    url: /categories/about/
   - title: "Functional"
     url: /categories/functional/
   - title: "Performance"
@@ -10,5 +12,3 @@ main:
     url: /categories/security/
   - title: "Automation"
     url: /categories/automation/
-  - title: "About"
-    url: /categories/about/
