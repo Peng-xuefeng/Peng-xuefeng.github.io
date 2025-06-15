@@ -3,9 +3,9 @@ title:  "Welcome to myBlog!"
 header:
   teaser: "/assets/images/500x300.png"
 categories: 
-  - About
+  - about
 tags:
-  - Update
+  - update
 ---
 
 _Welcome to The Testing Well_  

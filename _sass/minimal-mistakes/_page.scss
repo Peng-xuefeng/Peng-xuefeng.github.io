@@ -323,12 +323,19 @@ body {
    ========================================================================== */
 
 .page__taxonomy {
-  .sep {
-    display: none;
-  }
-
-  strong {
-    margin-inline-end: 10px;
+  margin: 0.5em 0;
+  font-size: 0.8em;
+  
+  .p-category {
+    background: #f5f5f5;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    margin-right: 0.3em;
+    
+    &:hover {
+      background: #e0e0e0;
+      text-decoration: none;
+    }
   }
 }
 
