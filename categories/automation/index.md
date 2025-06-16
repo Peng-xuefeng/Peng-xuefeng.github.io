@@ -1,4 +1,8 @@
 ---
+title: Auto-Calc Coverage
+header:
+  overlay_image: /assets/images/elevator.jpg
+  caption: "An Amazing Website"
 layout: archive
 permalink: /categories/automation/
 author_profile: true

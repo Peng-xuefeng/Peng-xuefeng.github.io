@@ -1,4 +1,6 @@
 ---
+title:  Quality Assurance Insights
+description: Sharing strategies for testing.
 layout: archive
 header:
   overlay_image: /assets/images/about.jpg

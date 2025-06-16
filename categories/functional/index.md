@@ -1,4 +1,8 @@
 ---
+title: Verify the Path
+header:
+  overlay_image: /assets/images/functional.jpg
+  caption: "An Amazing Website"
 layout: archive
 permalink: /categories/functional/
 author_profile: true
