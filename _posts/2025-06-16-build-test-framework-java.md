@@ -1,9 +1,9 @@
 ---
-title:  "Load Testing With JMeter"
+title:  "Build Test Framework With Java"
 header:
-  teaser: /assets/images/teasers/perf.jpg
+  teaser: /assets/images/teasers/auto.jpg
 categories: 
-  - performance
+  - automation
 tags:
   - testing
 ---

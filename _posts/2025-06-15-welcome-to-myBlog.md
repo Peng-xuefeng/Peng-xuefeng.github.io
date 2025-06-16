@@ -1,7 +1,7 @@
 ---
 title:  "Welcome to myBlog!"
 header:
-  teaser: "/assets/images/500x300.png"
+  teaser: /assets/images/teasers/about.jpg
 categories: 
   - about
 tags:

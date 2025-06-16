@@ -1,9 +1,9 @@
 ---
-title:  "Load Testing With JMeter"
+title:  "BurpSuite Scan & TOP 10 Security Issues"
 header:
-  teaser: /assets/images/teasers/perf.jpg
+  teaser: /assets/images/teasers/scan.jpg
 categories: 
-  - performance
+  - security
 tags:
   - testing
 ---

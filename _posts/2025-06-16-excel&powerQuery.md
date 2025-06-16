@@ -1,9 +1,9 @@
 ---
-title:  "Load Testing With JMeter"
+title:  "Excel Utilization"
 header:
-  teaser: /assets/images/teasers/perf.jpg
+  teaser: /assets/images/teasers/func.jpg
 categories: 
-  - performance
+  - functional
 tags:
   - testing
 ---

@@ -1,5 +1,5 @@
 ---
-title:  "Load Testing With JMeter"
+title:  "Load Testing With Sitespeed"
 header:
   teaser: /assets/images/teasers/perf.jpg
 categories: 
