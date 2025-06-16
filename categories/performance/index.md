@@ -1,5 +1,5 @@
 ---
-title: Performance Visibility
+title: Forest Under Load
 header:
   overlay_image: /assets/images/performance.jpg
   caption: "An Amazing Website"
