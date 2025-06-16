@@ -8,22 +8,24 @@ tags:
   - testing
 ---
 
-_Creating Your JMeter Script_  
+_Useful Excel Build-in Function_  
 
-Preparation:  
-How to determine concurrent users?  
-**Based on Peak Business Volume and 80/20 Rule**  
-1. **Calculate TPS:**
-    * Use peak daily visits (V<sub>peak_day</sub>)
-    * Apply 80/20 rule:
-      ![tps](/assets/images/tps.png)
-2. **Determine Response Time (R)**
-    * For parallel APIs (e.g., 5 APIs in bzm Parallel Controller):
-      R=Longest API time=max(0.3,0.5,0.7,0.6,0.2)=0.7s
-    * For sequential APIs:
-      R=Sum of API times=0.3+0.5+0.7+0.6+0.2=2.3s  
-3. **Concurrent Users = TPS * R**
-    * Parallel Scenarios: 139 * 0.7 ≈ 98
-    * Sequential Scenarios: 139 * 2.3 ≈ 320
+**Scenario 1 :**   
+![scenario1_1](/assets/images/excel/scenario1_1.png)
+![scenario1_2](/assets/images/excel/scenario1_2.png)
+**Formula 1 - SUBTOTAL(function_num, ref1)**  
+For SUBTOTAL Function, forever use ***101-111*** as function_num
 
-How to record apis?
+Q1: How many pdf type transactions?  
+A1: Two Steps: 1. Filter Type PDF 2. =SUBTOTAL(103，C4:C8)
+![scenario1_A1](/assets/images/excel/scenario1_A1.png)
+Q2: What is average total process time of word type transactions?  
+A2: Two Steps: 1. Filter Type Word 2. =SUBTOTAL(101，D5:D12)
+![scenario1_A2](/assets/images/excel/scenario1_A2.png)
+
+**Formula 2 - PERCENTILE.INC(array, k)**  
+For PERCENTILE.INC Function, it is used to calculate percentage number
+
+Q3: What is 90% total process time of PDF type transactions?  
+A3: Two Steps: 1. Filter Type PDF 2. =PERCENTILE.INC(D4:D8，**0.9**)
+![scenario1_A3](/assets/images/excel/scenario1_A3.png)
