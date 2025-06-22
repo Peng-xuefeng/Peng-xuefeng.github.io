@@ -84,7 +84,30 @@ A8: Follow one step
 ![scenario3_3](/assets/images/excel/scenario3_A8_1.png)
 ![scenario3_3](/assets/images/excel/scenario3_A8_2.png)
 
-Q9: Extract first 3 character as test account  
+Q9: Extract first 3 character of LAN ID as test account  
 A9: One Step
 1. ...Merge Queries as new->Add Column->Choose LAN ID->Duplicate Column->Choose the duplicated one->Home->Extract first 3 char
 ![scenario3_3](/assets/images/excel/scenario3_A9_1.png)
+
+Q10: My boss would like to know the annual salary,For External multiply 12, For Permanent multiply 13.5  
+A10: One Step
+1. ...Merge Queries as new->Add Column->Custom Column->Write M Function
+![scenario3_3](/assets/images/excel/scenario3_A0_1.png)
+
+Q11: My boss would like to know Testing,Dev Total Annual Salary  
+A11: One Step
+1. ...Merge Queries as new->Transform->Group By
+![scenario3_3](/assets/images/excel/scenario3_A11_1.png)
+![scenario3_3](/assets/images/excel/scenario3_A11_2.png)
+
+**Scenario 4 :**   
+![scenario4_1](/assets/images/excel/scenario4_1.png)
+![scenario4_2](/assets/images/excel/scenario4_2.png)
+
+Q12: I need to merge sheets or merge two excels  
+A12: Two Separate Steps
+1. New Excel->Data->From File->Excel Workbook->Append Queries as new
+![scenario4_3](/assets/images/excel/scenario4_A12_1.png)
+2. New Excel->Data->From File->Folder->Transform->Keep Content Column only->Add custom column->=Excel.Workbook([Content],true)->Delete Content Column->Expand Data
+![scenario4_3](/assets/images/excel/scenario4_A12_2.png)
+![scenario4_3](/assets/images/excel/scenario4_A12_3.png)
