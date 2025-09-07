@@ -8,22 +8,31 @@ tags:
   - testing
 ---
 
-_Creating Your JMeter Script_  
+_Design Your Test Case_  
 
 Preparation:  
-How to determine concurrent users?  
-**Based on Peak Business Volume and 80/20 Rule**  
-1. **Calculate TPS:**
-    * Use peak daily visits (V<sub>peak_day</sub>)
-    * Apply 80/20 rule:
-      ![tps](/assets/images/tps.png)
-2. **Determine Response Time (R)**
-    * For parallel APIs (e.g., 5 APIs in bzm Parallel Controller):
-      R=Longest API time=max(0.3,0.5,0.7,0.6,0.2)=0.7s
-    * For sequential APIs:
-      R=Sum of API times=0.3+0.5+0.7+0.6+0.2=2.3s  
-3. **Concurrent Users = TPS * R**
-    * Parallel Scenarios: 139 * 0.7 ≈ 98
-    * Sequential Scenarios: 139 * 2.3 ≈ 320
+For now, most of the companies' software is rarely a single screen; It's a series of interconnected steps—a Flow.  
+The good news? Testing these flows doesn't have to be complicated. By using a simple, two-part strategy, you can create comprehensive and effective test cases that ensure a high-quality user experience.
 
-How to record apis?
+**The Core Idea: Deconstruct, Then Apply**, We take buying insurance as an example.
+* Step 1: Deconstruct the Flow
+    1. User inputs username and password to login APP
+    2. User enters basic personal information like name,age,salary
+    3. User chooses basic insurance plan.
+    4. User inputs detailed inforamtion like address,family member.
+    5. User submits the request.
+
+
+* Step 2: Apply Black-Box Testing Techniques,focusing one step at a time 
+    * For Step 1:
+        * Valid Equivalence Class: matched username & password
+        * Invalid Equivalence Classes: unmatched username & password
+    * For Step 2:
+        * Boundary Value Analysis: Test age or salary with -1
+    * For Step 3:
+        * Orthogonal experimental method: Test insurance plan combination
+    * For Step 5:
+        * Valid Equivalence Class: successful submission
+        * Invalid Equivalence Classes: unsuccessful submission
+
+
