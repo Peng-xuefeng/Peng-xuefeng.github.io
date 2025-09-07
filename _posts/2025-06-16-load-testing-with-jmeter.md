@@ -26,4 +26,5 @@ How to determine concurrent users?
     * Parallel Scenarios: 139 * 0.7 ≈ 98
     * Sequential Scenarios: 139 * 2.3 ≈ 320
 
-How to record apis?
+How to record apis?  
+Previously, we used HTTP Recorder 
