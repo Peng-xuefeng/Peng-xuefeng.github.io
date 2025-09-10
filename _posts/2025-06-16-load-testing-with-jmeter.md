@@ -27,4 +27,10 @@ How to determine concurrent users?
     * Sequential Scenarios: 139 * 2.3 ≈ 320
 
 How to record apis?  
-Previously, we used HTTP Recorder 
+Previously, we used HTTP Script Recorder, which will configure proxy and clear hsts [hsts](https://www.thesslstore.com/blog/clear-hsts-settings-chrome-firefox/)  
+But recently, I find a helpful plugin which can directly convert har file to jmx file
+* Step 1
+    * Download har-convertor-jmeter-plugin-7.1-jar-with-dependencies.jar from site [convert-tool](https://dzone.com/articles/convert-a-har-file-to-jmeter-script)
+    * Follow the step and convert
+* Step 2
+    * Parameter your jmx script
