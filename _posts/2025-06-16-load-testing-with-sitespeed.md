@@ -17,6 +17,7 @@ Have you ever clicked on a website only to wait... and wait... for it to load? T
     * run npm install
 * Step 2: Configure Pages into your js file
     1. urlConfig:  
+       ```
         var urlConfig = {  
                "urls1":[  
         {"name":"BaiduHomePage","url":"https://www.baidu.com"},  
@@ -24,7 +25,9 @@ Have you ever clicked on a website only to wait... and wait... for it to load? T
           ]  
          }  
         module.exports = urlConfig
+        ```
     2. execution js:  
+        ```
         module.exports = async function(context,commands) {  
           const urlConfig = require("./urlConfig.js");  
                for (let url of urlConfig.urls1) {  
@@ -36,7 +39,8 @@ Have you ever clicked on a website only to wait... and wait... for it to load? T
                     throw e;  
                   }  
                }  
-        };   
+        };  
+        ``` 
       3. bat file trigger:  
          ```
          cd F:\sitespeed\sitespeed.io
