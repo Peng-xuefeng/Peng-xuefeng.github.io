@@ -8,22 +8,38 @@ tags:
   - testing
 ---
 
-_Creating Your JMeter Script_  
+_Creating Your Front End Performance Script_  
 
 Preparation:  
-How to determine concurrent users?  
-**Based on Peak Business Volume and 80/20 Rule**  
-1. **Calculate TPS:**
-    * Use peak daily visits (V<sub>peak_day</sub>)
-    * Apply 80/20 rule:
-      ![tps](/assets/images/tps.png)
-2. **Determine Response Time (R)**
-    * For parallel APIs (e.g., 5 APIs in bzm Parallel Controller):
-      R=Longest API time=max(0.3,0.5,0.7,0.6,0.2)=0.7s
-    * For sequential APIs:
-      R=Sum of API times=0.3+0.5+0.7+0.6+0.2=2.3s  
-3. **Concurrent Users = TPS * R**
-    * Parallel Scenarios: 139 * 0.7 ≈ 98
-    * Sequential Scenarios: 139 * 2.3 ≈ 320
-
-How to record apis?
+Have you ever clicked on a website only to wait... and wait... for it to load? That moment of frustration is more than just a minor inconvenience; it's a critical business metric that can dictate user retention, conversion rates, and SEO rankings. As developers and performance advocates, our mission is to eliminate that wait. To do that effectively, we need robust tools. Enter **Sitespeed.io** In this series, we'll explore how to leverage Sitespeed.io to transform user experience from frustrating to flawless, one test at a time.  
+* Step 1: Configure Sitespeed.io
+    * clone [sitespeed](https://github.com/sitespeedio/sitespeed.io) into your workcopy
+    * run npm install
+* Step 2: Configure Pages into your js file
+    1. urlConfig:  
+        var urlConfig = {  
+               "urls1":[  
+        {"name":"BaiduHomePage","url":"https://www.baidu.com"},  
+        {"name":"BaiduNews","url":"https://news.baidu.com/"}  
+          ]  
+         }  
+        module.exports = urlConfig
+    2. execution js:  
+        module.exports = async function(context,commands) {
+          const urlConfig = require("./urlConfig.js");
+               for (let url of urlConfig.urls1) {
+                  try {
+                    await commands.measure.start(url.url,url.name);
+                    await commands.cache.clear();
+                    await commands.navigate('about:blank');
+                  } catch(e) {
+                    throw e;
+                  }
+               }
+        };
+      3. bat file trigger
+         cd F:\sitespeed\sitespeed.io
+         set PATH =%PATH%;
+         for /L %%a in(1,1,3) do {
+          node bin\sitespeed.js ..\script\baidu\baidugroup1.js -n 1 --name="Baidu" --multi --basicAuth "username@password" -b edge
+         }
