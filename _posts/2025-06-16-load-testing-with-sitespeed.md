@@ -25,19 +25,19 @@ Have you ever clicked on a website only to wait... and wait... for it to load? T
          }  
         module.exports = urlConfig
     2. execution js:  
-        module.exports = async function(context,commands) {
-          const urlConfig = require("./urlConfig.js");
-               for (let url of urlConfig.urls1) {
+        module.exports = async function(context,commands) {  
+          const urlConfig = require("./urlConfig.js");  
+               for (let url of urlConfig.urls1) {  
                   try {
-                    await commands.measure.start(url.url,url.name);
-                    await commands.cache.clear();
-                    await commands.navigate('about:blank');
-                  } catch(e) {
-                    throw e;
-                  }
-               }
-        };
-      3. bat file trigger
+                    await commands.measure.start(url.url,url.name);  
+                    await commands.cache.clear();  
+                    await commands.navigate('about:blank');  
+                  } catch(e) {  
+                    throw e;  
+                  }  
+               }  
+        };  
+      3. bat file trigger  
          cd F:\sitespeed\sitespeed.io
          set PATH =%PATH%;
          for /L %%a in(1,1,3) do {
