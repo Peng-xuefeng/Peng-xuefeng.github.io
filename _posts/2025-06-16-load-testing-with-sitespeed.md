@@ -36,10 +36,12 @@ Have you ever clicked on a website only to wait... and wait... for it to load? T
                     throw e;  
                   }  
                }  
-        };  
-      3. bat file trigger  
+        };   
+      3. bat file trigger:  
+         ```
          cd F:\sitespeed\sitespeed.io
          set PATH =%PATH%;
          for /L %%a in(1,1,3) do {
           node bin\sitespeed.js ..\script\baidu\baidugroup1.js -n 1 --name="Baidu" --multi --basicAuth "username@password" -b edge
          }
+         ```
