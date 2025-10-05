@@ -1,5 +1,5 @@
 ---
-title:  "BurpSuite Scan & TOP 10 Security Issues"
+title:  "BurpSuite Introduction"
 header:
   teaser: /assets/images/teasers/scan.jpg
 categories: 
