@@ -28,9 +28,9 @@ The good news? Testing these flows doesn't have to be complicated. By using a si
         * Valid Equivalence Class: matched username & password
         * Invalid Equivalence Classes: unmatched username & password
     * For Step 2:
-        * Boundary Value Analysis: Test age or salary with -1
+        * Boundary Value Analysis: Test age or salary with number less than 0, like: -1
     * For Step 3:
-        * Orthogonal experimental method: Test insurance plan combination
+        * Orthogonal experimental method: Test insurance plan combination e.g. Use [SPSSAU](https://spssau.com/indexs.html) to design your orthogonal experimental table
     * For Step 5:
         * Valid Equivalence Class: successful submission
         * Invalid Equivalence Classes: unsuccessful submission
